@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title> Curso JQuery </title>
+        <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <!--Caregar os Scripts antes do body-->
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <div class="m-5"></div>
+        <div class="container text-center">
+            <div id="caixa">
+                <h2>Titulo H2 Teste</h2>
+                <p>texto P Teste</p>
+            </div>
+            <h2>Sub-Titulo H2 Teste</h2>
+            <input type="text" id="nome">
+        </div>
+    </div>
+        
+    </body>
+    <script>
+        $("#caixa").click(function(){
+            alert("Texto: " + $(this).html());
+        });
+    </script>
+
+</html>

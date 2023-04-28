@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title> Curso JQuery </title>
+        <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <!--Caregar os Scripts antes do body-->
+        <style>
+            p{
+                background-color: #aff;
+            }
+            h3{
+                background-color: #faf;
+            }
+            .borda{
+                border: 2px solid #f00;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="m-5"></div>
+        <div class="container text-center">
+            <p class="borda">CFB Cursos</p>
+            <h3>CFB Cursos</h3>
+
+            <p>Curso de canvas</p> 
+            <h3>Curso de canvas</h3>
+
+            <p>youtube.com/cfbcursos</p>
+            <h3>youtube. .com/cfbcursos</h3>
+
+            <p class="borda">ww.cfbcursos.com.br</p>
+            <h3>www.cfbcursos.com.br</h3>
+
+            <p>Filtrando elementos</p>
+            <h3>Filtrando elementos</h3>                            
+        </div>
+    </div>
+        
+    </body>
+    <script>
+        $('p').filter('.borda').css({'color':'#f00' })
+        $('p').not('.borda').css({'color':'#00f' })
+    </script>
+
+</html>

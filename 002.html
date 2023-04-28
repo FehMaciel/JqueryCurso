@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+<meta charset="utf-8">
+<title> Curso JQuery </title>
+<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<style>
+    
+</style>
+</head>
+<body>
+    <div class="m-5"></div>
+    
+    <div class="container text-center">
+        <h4 class="m-5">Calculadora Simples Soma</h4>
+        <label>Valor 1</label>
+        <input type="text" id="v1" value="0">
+        <br>
+        <hr>
+        <label>Valor 2</label>
+        <input type="text" id="v2" value="0">
+        <br>
+        <hr>
+        <label>Resultado</label>
+        <input type="text" id="res" disabled value="0">
+        <br>
+        <hr>
+        <button id="btn_somarjs">Somar JS</button>
+        <button id="btn_somarjq">Somar JQ</button>
+    </div>    
+    <script>
+        let v1 = document.getElementById('v1');
+        let v2 = document.getElementById('v2');
+        let res = document.getElementById('res');
+        let btnJs = document.getElementById('btn_somarjs');
+
+        btnJs.addEventListener('click', function(){
+            var resultado = parseInt(v1.value) + parseInt(v2.value);
+            res.value = resultado;
+        })
+
+        $("#btn_somarjq").click(()=>{
+            let v1 = parseInt($("#v1").val());
+            let v2 = parseInt($("#v2").val());
+            let soma=v1+v2;
+            $("#res").val(soma);
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+<meta charset="utf-8">
+<title> Curso JQuery </title>
+<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<!--Caregar os Scripts antes do body-->
+<style>
+    body{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    #bloco{
+        width: 200px;
+        height: 200px;
+        background-color: rgb(255, 0, 0);
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+</head>
+<body>
+    <div class="m-5"></div>
+    <label>Nome</label>
+    <input type="text" id="nome">
+    <p id="texto"></p>
+</body>
+<script>
+    $("#nome").keyup(()=>{
+        $("#texto").text($("#nome").val());
+    })
+</script>
+
+</html>

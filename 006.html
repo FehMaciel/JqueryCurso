@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+<meta charset="utf-8">
+<title> Curso JQuery </title>
+<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<!--Caregar os Scripts antes do body-->
+<style>
+    body{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    #bloco{
+        width: 200px;
+        height: 200px;
+        background-color: rgb(0, 0, 0);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #bloco2{
+        width: 200px;
+        height: 200px;
+        background-color: rgb(255, 0, 0);
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+</head>
+<body>
+    <div class="d-flex">
+        <div id="bloco"></div>
+        <div id="bloco2"></div>
+    </div>
+    <p id="texto"></p>
+
+</body>
+<script>
+    $("#bloco").on({
+        click:()=>{$("#texto").text("Click no quadrado"), $("#bloco").css("background-color", "#f53f87")},
+        mouseenter:()=>{$("#texto").text("Mouse Entrou no Quadrado"), $("#bloco").css("background-color", "#0f0")},
+        mouseleave:()=>{$("#texto").text("Mouse Saiu do quadrado"), $("#bloco").css("background-color", "#000")},
+        dblclick:()=>{$("#texto").text("Click duplo no quadrado"), $("#bloco").css("background-color", "#00f")},
+    });
+
+    $("#bloco2").click(()=>{
+        $("#bloco2").css("background-color", "#120087")
+        $("#bloco").trigger('click')
+    })
+
+
+
+    //$("#texto").text("Click no quadrado");
+</script>
+
+</html>

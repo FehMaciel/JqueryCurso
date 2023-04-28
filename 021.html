@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title> Curso JQuery </title>
+        <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <!--Caregar os Scripts antes do body-->
+        <style>
+            .caixa{
+                border: 1px solid #949494;
+                width: 200px;
+                height: 200px;
+                background-color: #2600ff;
+                color: #fff;
+                border-radius: 10px;
+                position: absolute;
+                left: 20px;
+                top: 50px;
+                padding: 10px;
+                text-align: center;
+                box-sizing: border-box;
+            }
+            button{
+                margin: 10px;
+                padding: 15px 40px !important;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="m-5"></div>
+        <div class="container text-center">
+            <button class="btn btn-primary" id="btn_tamanho">Aumentar / Diminuir</button>
+            <button class="btn btn-primary" id="btn_mostrar">Ocultar / Mostrar</button>
+            <div id="caixa" class="caixa text-center align-items-center justify-content-center align-content-center">
+                <h3>Titulo H3 Teste</h3>
+                <p>texto P Teste</p>
+            </div>
+            
+        </div>
+    </div>
+        
+    </body>
+    <script>
+        $('#btn_tamanho').click(function(){
+            $('#caixa').animate({width: 'toggle', height: 'toggle'},{duration: 2000})
+        });
+        $('#btn_mostrar').click(function(){
+            $('#caixa').animate({opacity: 'toggle'},{duration: 2000})
+            
+        });
+        
+    </script>
+
+</html>
